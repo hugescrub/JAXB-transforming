@@ -5,6 +5,7 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.stream.XMLStreamException;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.Date;
 
 public class JAXBParser {
     public static void main(String[] args) {
@@ -21,8 +22,21 @@ public class JAXBParser {
 
             Root usersJAXB = (Root) jaxbUnmarshaller.unmarshal(file);
 
+            // Adding a new user
+            User user = new User();
+            user.setId(Long.parseLong("1"));
+            user.setFullname("Olegov Oleg Olegovich");
+            user.setEmail("email@email.com");
+            user.setCountry("newCountry");
+            user.setTown("newTown");
+            user.setRegistered(Date.valueOf("2018-01-19"));
+            user.setAddress("newAddress");
+
+            usersJAXB.getUsers().add(user);
+
             usersJAXB.getUsers().getUsers().get(0).setCountry("NotRussia"); // Changing default values
             usersJAXB.getUsers().getUsers().get(0).setFullname("AnotherName");
+
 
             System.out.println(usersJAXB.getUsers().getUsers()); // output for tests
 

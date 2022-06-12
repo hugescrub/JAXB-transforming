@@ -113,5 +113,13 @@
             <registered>2021-05-16T09:21:01+03:00</registered>
             <address>Goethestrasse 13, 89346</address>
         </user>
+        <user id="1">
+            <fullname>Olegov Oleg Olegovich</fullname>
+            <email>email@email.com</email>
+            <country>newCountry</country>
+            <town>newTown</town>
+            <registered>2018-01-19T00:00:00+03:00</registered>
+            <address>newAddress</address>
+        </user>
     </users>
 </Root>

@@ -92,63 +92,63 @@ public class HTMLGenerator {
                 writer.writeEndElement();
             }
 
+            writer.writeStartElement("table");
+
             writer.writeStartElement("td");
             writer.writeCharacters("User Count: ");
             writer.writeEndElement();
 
             writer.writeStartElement("td");
-            writer.writeAttribute("colspan", "5");
             writer.writeCharacters(String.valueOf(users.getUsers().size()));
             writer.writeEndElement();
 
+            writer.writeStartElement("tr");
 
-            writer.writeStartElement("table");
-
-            writer.writeStartElement("ru");
+            writer.writeStartElement("td");
             writer.writeCharacters("Users from Russia: ");
             writer.writeEndElement();
 
-            writer.writeStartElement("ru");
+            writer.writeStartElement("td");
             writer.writeCharacters(String.valueOf(users.getByCountry("Russia").size()));
             writer.writeEndElement();
 
-            writer.writeStartElement("table");
+            writer.writeStartElement("tr");
 
-            writer.writeStartElement("de");
+            writer.writeStartElement("td");
             writer.writeCharacters("Users from Germany: ");
             writer.writeEndElement();
 
-            writer.writeStartElement("de");
+            writer.writeStartElement("td");
             writer.writeCharacters(String.valueOf(users.getByCountry("Germany").size()));
             writer.writeEndElement();
 
-            writer.writeStartElement("table");
+            writer.writeStartElement("tr");
 
-            writer.writeStartElement("us");
+            writer.writeStartElement("td");
             writer.writeCharacters("Users from United States: ");
             writer.writeEndElement();
 
-            writer.writeStartElement("us");
+            writer.writeStartElement("td");
             writer.writeCharacters(String.valueOf(users.getByCountry("United States").size()));
             writer.writeEndElement();
 
-            writer.writeStartElement("table");
+            writer.writeStartElement("tr");
 
-            writer.writeStartElement("au");
+            writer.writeStartElement("td");
             writer.writeCharacters("Users from Austria: ");
             writer.writeEndElement();
 
-            writer.writeStartElement("au");
+            writer.writeStartElement("td");
             writer.writeCharacters(String.valueOf(users.getByCountry("Austria").size()));
             writer.writeEndElement();
 
-            writer.writeStartElement("table");
+            writer.writeStartElement("tr");
 
-            writer.writeStartElement("pl");
+            writer.writeStartElement("td");
             writer.writeCharacters("Users from Poland: ");
             writer.writeEndElement();
 
-            writer.writeStartElement("pl");
+            writer.writeStartElement("td");
             writer.writeCharacters(String.valueOf(users.getByCountry("Poland").size()));
             writer.writeEndElement();
 

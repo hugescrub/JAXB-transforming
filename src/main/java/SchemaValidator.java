@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 public class SchemaValidator {
 
-    public static boolean schemaValidator(String schemaFile, String xmlFile){
+    public static boolean schemaValidator(String schemaFile, String xmlFile) {
         try {
             SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             Schema schema = factory.newSchema(new File(schemaFile));

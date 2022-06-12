@@ -9,7 +9,6 @@ public class Users {
 
     private List<User> userList;
 
-    // constructors
     public Users() {
 
     }
@@ -17,6 +16,14 @@ public class Users {
     public Users(List<User> userList) {
         this.userList = userList;
     }
+
+    public void add(User user) {
+        if (this.userList == null) {
+            this.userList = new ArrayList<>();
+        }
+        this.userList.add(user);
+    }
+
 
     // ... getters & setters
 

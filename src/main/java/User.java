@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 import java.util.Date;
 
 @XmlRootElement(name = "user", namespace = "http://namespace.com/Integration")
-@XmlType(propOrder = { "id", "fullname", "email", "country", "town", "registered", "address" })
+@XmlType(propOrder = {"id", "fullname", "email", "country", "town", "registered", "address"})
 public class User {
 
     private Long id;
@@ -15,6 +15,20 @@ public class User {
     private String town;
     private Date registered;
     private String address;
+
+
+    public User() {
+    }
+
+    public User(Long id, String fullname, String email, String country, String town, Date registered, String address) {
+        this.id = id;
+        this.fullname = fullname;
+        this.email = email;
+        this.country = country;
+        this.town = town;
+        this.registered = registered;
+        this.address = address;
+    }
 
     public Long getId() {
         return id;
